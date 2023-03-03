@@ -1,0 +1,8 @@
+
+server:
+  port: 8084
+  servlet:
+    context-path: /test-ecs-app
+spring:
+  application:
+    name: test-ecs-app
