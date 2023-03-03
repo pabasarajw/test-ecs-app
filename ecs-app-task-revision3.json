@@ -1,0 +1,65 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:192614128300:task-definition/ecs-app-task:3",
+    "containerDefinitions": [
+        {
+            "name": "test-ecs-app",
+            "image": "192614128300.dkr.ecr.us-east-1.amazonaws.com/test-ecs-app-repo:2",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "test-ecs-app-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                },
+                {
+                    "name": "test-ecs-app-8084-tcp",
+                    "containerPort": 8084,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "ecs-app-task",
+    "taskRoleArn": "arn:aws:iam::192614128300:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::192614128300:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-03-03T18:49:42.714Z",
+    "registeredBy": "arn:aws:iam::192614128300:root",
+    "tags": []
+}
